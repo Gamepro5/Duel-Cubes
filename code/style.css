@@ -1,0 +1,28 @@
+.viewport {
+  /* make the viewport the anchor for #dev_tools */
+  position: relative;
+}
+#dev_tools {
+  /* make it float on top of the canvas within the viewport */
+  position: absolute;
+  /* align it to top-left corner */
+  top: 0;
+  left: 0;
+  /* just in case, make its CSS layer above the canvas */
+  z-index: 1;
+}
+a.data {
+  background-color: rgba(0,0,0,100%);
+  color: #00b140;
+  font-family: 'Ubuntu Mono',sans-serif;
+}
+.code_box {
+  border: #000000;
+  border-style: solid;
+  border-width: 1px;
+  padding: 2.5px;
+  font-size: calc(100% - 2.5px);
+  border-radius: 5px;
+  background: #a2a2a2;
+  font-family: 'Ubuntu Mono',sans-serif;
+}

@@ -1,0 +1,3 @@
+Duel Cubes Bugs:
+
+the lookAt method makes the characters look at the exact opposite direction, so i had to temporarily use sPressed since otherwise he would basically run away. When I first set up the camera, it must have been facing in the negative z direction instead of positive z.

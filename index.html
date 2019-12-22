@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<link href="/const.css" rel="stylesheet">
+		<link href="/programs/duel_cubes/code/style.css" rel="stylesheet">
+		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+		<meta name="description" content="Duel Cubes is a 3D shooter"/>
+		<title>Gamepro5 - Duel Cubes</title>
+	</head>
+
+<body>
+
+<div class="main">
+	<div class="sidebar"><div class="js_error"><b>ERROR:</b> The quick links require JavaScript to load and function.</div></div>
+		<div class="wrapper">
+			<div class="header"><div class="js_error"><b>ERROR:</b> The navigation buttons and header require JavaScript to load and function.</div></div>
+				<div class="content">
+					<a href="/programs"><img class="backarrow" src="/images/icons/backarrow.svg"></a>
+					<p><b>Current Build:</b> Tech Test Alpha v1.0</p>
+					<p><b>Stability:</b> Stable!</p>
+						<div><a class="accordion">Show Controls</a>
+							<div class="panel">
+								<ul>
+									<li><b>SPACE</b> to jump</li>
+									<li><b>W</b>, <b>A</b>, <b>S</b>, and <b>D</b> to move</li>
+									<li><b>MOUSE</b> to turn</li>
+									<li><b>O</b> to toggle perspective camera.</li>
+									<li><b>I</b> to warp to HYPERSPEED!</li>
+									<li><b>M</b> to go into developer view.</li>
+									<li><b>B</b> to toggle the bot's AI.</li>
+									<li><b>1</b> to select the pistol</li>
+									<i>Once a weapon is selected, <b>MOUSE1</b> to shoot, and <b>F</b> to rotate the weapon. Also, to put away the weapon, click the same key you clicked to take it out.</i>
+								</ul>
+							</div>
+						</div>
+						<div><a class="accordion">View My To-Do List (Prioritized by Order)</a>
+							<div class="panel">
+								<ol>
+									<li>Understand local delays</li>
+									<li>Add some sort of UI/Menu somehow?</li>
+									<li>Implement a health System (on the UI)</li>
+									<li>Design Arena?</li>
+									<li>Add more weapons?</li>
+									<li>Add Abilities?</li>
+									<li>Implement AI bots</li>
+									<li>Performance improvements?</li>
+									<li>Release?</li>
+								</ol>
+							</div>
+						</div>
+						<div><a class="accordion">View Update Log</a>
+						<div class="panel">
+								<div><a class="accordion">tech test alpha v1.0</a>
+								<div class="panel">
+									<ul>
+										<li>Started listing patch notes and version names. (which is why this is the first official update)</li>
+										<li>Bots and Players share the same code. (idk why)
+											<ul>
+												<li>Players and bots are now known as "people" though the <a class="code_box">new PERSON(name, type, collisionBox, model)</a> class.</li>
+												<li>Added objects for <a class="code_box">person.name</a>, <a class="code_box">person.type</a>, <a class="code_box">person.collisionBox</a>, and <a class="code_box">person.model</a>. For example, <a class="code_box">person.type</a> can be set to either <a class="code_box">"player"</a> or <a class="code_box">"bot"</a>, while it's model is the model object. The model parameter that makes <a class="code_box">person.model</a> was added so the bots don't need to look like the player.</li>
+											</ul></li>
+										<li>Fixed a bug that set the x velocity to 0 when colliding with a z face of another block.</li>
+										<li>Added a new complex structure to test collisions in</li>
+										<li>CSS changes to the developer info thing that happens when you press "M".</li>
+										<li>Bot1 is 50% taller. Need I say more?</li>
+										<li>Introduced around 2 more bugs I need to fix.
+											<ul>
+												<li>People can't be certain tallness otherwise their position becomes undefined (scary) probably because of a rounding error. Sean's error triggered.</li>
+												<li>I'm probably stupid, but when trying to make the new structure introduced in this update I could not refer to the previously declared structures. Sean's error also triggered.</li>
+											</ul></li>
+										<li>Code cleanups!</li>
+									</ul>
+								</div>
+								</div>
+						</div>
+						</div>
+					<p>
+						<div class="viewport">
+						<div id="dev_tools"></div>
+						<canvas id="c"><div class="js_error"><b>ERROR:</b> JavaScript programs need JavaScript to be enabled to run. You shouldn't be surprised by this.</div></canvas>
+						</div>
+					</p>
+					<p>Black screen? Game not working? Either I'm just bad or I'm busy updating it, come back later!</p>
+					<p>See the <a class="link" href="/programs/duel_cubes/bug_tracker.txt">overwhelmingly advanced bug tracker</a> if you like</p>
+		</div>
+	</div>
+</div>
+
+<script src="/const.js">
+</script>
+
+<script src="/js/accordion.js">
+</script>
+
+<script src="/js/libraries/three.js">
+</script>
+
+<script src="/programs/duel_cubes/code/duel_cubes.js">
+</script>
+
+</body>
+</html>
